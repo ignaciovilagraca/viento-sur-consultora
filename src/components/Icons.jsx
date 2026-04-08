@@ -100,6 +100,25 @@ export function InstagramIcon() {
   );
 }
 
+export function LinkedinIcon() {
+  return (
+    <svg {...svgProps}>
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
+
+export function WebIcon() {
+  return (
+    <svg {...svgProps}>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </svg>
+  );
+}
+
 const iconMap = {
   building: BuildingIcon,
   health: HealthIcon,
@@ -112,6 +131,8 @@ const iconMap = {
   mail: MailIcon,
   phone: PhoneIcon,
   instagram: InstagramIcon,
+  linkedin: LinkedinIcon,
+  web: WebIcon,
 };
 
 export function Icon({ name, ...props }) {

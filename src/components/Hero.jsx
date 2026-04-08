@@ -53,13 +53,15 @@ export default function Hero() {
           <h1 className="hero__logo-title">Viento Sur</h1>
           <div className="hero__logo-divider" />
           <p className="hero__logo-sub">Consultora</p>
-          <p className="hero__logo-tagline">Estrategia e implementación en salud</p>
+          <p className="hero__logo-tagline">Asesoramiento, planificación, implementación y monitoreo en salud</p>
+          <p className="hero__logo-location">Argentina · América Latina</p>
         </div>
         <p className="hero__description fade-up">
           Consultora senior orientada a fortalecer el desempeño de programas y proyectos de salud, con
           énfasis en enfermedades transmisibles (VIH/ITS, hepatitis virales, tuberculosis) y un enfoque
           transversal de equidad, género y derechos.
         </p>
+        <p className="hero__claim fade-up">Convertimos políticas de salud en impacto medible</p>
         <div className="hero__actions fade-up">
           <a href="#servicios" className="btn btn--primary" onClick={handleClick}>
             Capacidades y propuestas

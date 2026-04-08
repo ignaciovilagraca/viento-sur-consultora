@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { useFadeUp } from '../hooks/useFadeUp';
-import { MailIcon, PhoneIcon, InstagramIcon } from './Icons';
+import { MailIcon, PhoneIcon, InstagramIcon, LinkedinIcon, WebIcon } from './Icons';
 
 const INITIAL_STATE = { name: '', email: '', org: '', message: '' };
 
@@ -41,7 +41,7 @@ export default function Contact() {
               <p className="contact__logo-title">Viento Sur</p>
               <div className="contact__logo-divider" />
               <p className="contact__logo-sub">Consultora</p>
-              <p className="contact__logo-tagline">Estrategia e implementación en salud</p>
+              <p className="contact__logo-tagline">Asesoramiento, planificación, implementación y monitoreo en salud</p>
             </div>
             <div className="contact__channels">
               <a href="mailto:info@vientosurconsultora.com" className="contact__channel">
@@ -75,6 +75,30 @@ export default function Contact() {
                 <div>
                   <span className="contact__channel-label">Instagram</span>
                   <span className="contact__channel-value">@vientosur.consultora</span>
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/112822179"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact__channel"
+              >
+                <LinkedinIcon />
+                <div>
+                  <span className="contact__channel-label">LinkedIn</span>
+                  <span className="contact__channel-value">Viento Sur Consultora</span>
+                </div>
+              </a>
+              <a
+                href="https://www.vientosurconsultora.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact__channel"
+              >
+                <WebIcon />
+                <div>
+                  <span className="contact__channel-label">Web</span>
+                  <span className="contact__channel-value">www.vientosurconsultora.com</span>
                 </div>
               </a>
             </div>
