@@ -496,7 +496,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .service-card__deliverables li::before {
-  content: '▸';
+  content: '\25B8';
   position: absolute;
   left: 0;
   top: 0;
