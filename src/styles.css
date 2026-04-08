@@ -587,6 +587,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   padding: 36px 28px;
   text-align: center;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .team-card:hover {
@@ -637,7 +640,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 16px;
+  margin-top: auto;
+  padding-top: 16px;
   color: var(--color-text-muted);
   transition: var(--transition);
 }
