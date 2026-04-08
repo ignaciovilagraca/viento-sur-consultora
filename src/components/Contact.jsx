@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { useFadeUp } from '../hooks/useFadeUp';
-import { MailIcon, PhoneIcon, InstagramIcon, LinkedinIcon, WebIcon } from './Icons';
+import { MailIcon, PhoneIcon, InstagramIcon, LinkedinIcon } from './Icons';
 
 const INITIAL_STATE = { name: '', email: '', org: '', message: '' };
 
@@ -87,18 +87,6 @@ export default function Contact() {
                 <div>
                   <span className="contact__channel-label">LinkedIn</span>
                   <span className="contact__channel-value">Viento Sur Consultora</span>
-                </div>
-              </a>
-              <a
-                href="https://www.vientosurconsultora.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact__channel"
-              >
-                <WebIcon />
-                <div>
-                  <span className="contact__channel-label">Web</span>
-                  <span className="contact__channel-value">www.vientosurconsultora.com</span>
                 </div>
               </a>
             </div>
