@@ -561,10 +561,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .client-tag span {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--color-text-secondary);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* ===================================================================
