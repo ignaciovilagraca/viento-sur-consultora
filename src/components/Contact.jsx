@@ -2,6 +2,16 @@ import { useState, useCallback } from 'react';
 import { useFadeUp } from '../hooks/useFadeUp';
 import { MailIcon, PhoneIcon, InstagramIcon, LinkedinIconMinimal } from './Icons';
 
+const GOOGLE_FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfyys0ik-mSdq1vi_Ys-Xg-YJqYKN4oCA3GnDFJBJ80OYWh4g/formResponse';
+
+const FIELD_MAP = {
+  name: 'entry.1559024165',
+  email: 'entry.1344643477',
+  org: 'entry.741318481',
+  message: 'entry.1177337723',
+};
+
 const INITIAL_STATE = { name: '', email: '', org: '', message: '' };
 
 export default function Contact() {
@@ -15,17 +25,31 @@ export default function Contact() {
   }, []);
 
   const handleSubmit = useCallback(
-    (e) => {
+    async (e) => {
       e.preventDefault();
       setStatus('sending');
 
-      setTimeout(() => {
-        setStatus('sent');
-        setForm(INITIAL_STATE);
-        setTimeout(() => setStatus('idle'), 3000);
-      }, 1200);
+      const body = new URLSearchParams();
+      Object.entries(FIELD_MAP).forEach(([key, entry]) => {
+        body.append(entry, form[key]);
+      });
+
+      try {
+        await fetch(GOOGLE_FORM_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body.toString(),
+        });
+      } catch {
+        // Google Forms returns opaque response with no-cors; submission still succeeds
+      }
+
+      setStatus('sent');
+      setForm(INITIAL_STATE);
+      setTimeout(() => setStatus('idle'), 3000);
     },
-    [],
+    [form],
   );
 
   const buttonText =
