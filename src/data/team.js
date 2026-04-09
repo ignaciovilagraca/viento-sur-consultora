@@ -20,7 +20,7 @@ export const team = [
     photo: '/team-marcelo.png',
     name: 'Dr. Marcelo Vila',
     role: 'Médico clínico y epidemiólogo',
-    bio: 'Coordinador senior en VIH/TB/Hepatitis, OPS/OMS para Argentina y Cono Sur (2006–2025), experto en vigilancia epidemiológica y autor de publicaciones científicas internacionales.',
+    bio: 'Especialista en Salud Pública, coordinador senior en VIH/TB/Hepatitis, OPS/OMS para Argentina y Cono Sur (2006–2025), experto en vigilancia epidemiológica y autor de publicaciones científicas internacionales.',
     linkedin: 'https://www.linkedin.com/in/marcelo-eduardo-vila-2337a3a/',
   },
   {
