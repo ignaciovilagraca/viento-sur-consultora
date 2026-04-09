@@ -78,7 +78,7 @@ export default function Contact() {
                 </div>
               </a>
               <a
-                href="https://www.linkedin.com/company/112822179"
+                href="https://www.linkedin.com/company/viento-sur-consultora"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__channel"

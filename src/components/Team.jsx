@@ -2,11 +2,15 @@ import { useFadeUp } from '../hooks/useFadeUp';
 import { team } from '../data/team';
 import { LinkedinIcon } from './Icons';
 
-function TeamCard({ initials, name, role, bio, linkedin }) {
+function TeamCard({ photo, initials, name, role, bio, linkedin }) {
   return (
     <article className="team-card fade-up">
       <div className="team-card__avatar">
-        <span>{initials}</span>
+        {photo ? (
+          <img src={photo} alt={name} className="team-card__photo" />
+        ) : (
+          <span>{initials}</span>
+        )}
       </div>
       <h3 className="team-card__name">{name}</h3>
       <p className="team-card__role">{role}</p>
