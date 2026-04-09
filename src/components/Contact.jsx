@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { useFadeUp } from '../hooks/useFadeUp';
-import { MailIcon, PhoneIcon, InstagramIcon, LinkedinIcon } from './Icons';
+import { MailIcon, PhoneIcon, InstagramIcon, LinkedinIconMinimal } from './Icons';
 
 const INITIAL_STATE = { name: '', email: '', org: '', message: '' };
 
@@ -83,7 +83,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="contact__channel"
               >
-                <LinkedinIcon />
+                <LinkedinIconMinimal />
                 <div>
                   <span className="contact__channel-label">LinkedIn</span>
                   <span className="contact__channel-value">Viento Sur Consultora</span>
