@@ -5,21 +5,21 @@
 :root {
   --color-bg: #fafaf8;
   --color-surface: #ffffff;
-  --color-text: #1a1a2e;
-  --color-text-secondary: #4a4a6a;
-  --color-text-muted: #8888a4;
+  --color-text: #0a1f3d;
+  --color-text-secondary: #3d5472;
+  --color-text-muted: #7a8ca8;
 
-  --color-primary: #1a6b6a;
-  --color-primary-light: #e6f2f2;
-  --color-primary-dark: #0f4f4e;
+  --color-primary: #05527c;
+  --color-primary-light: #e3f1f8;
+  --color-primary-dark: #002d64;
 
-  --color-accent: #2a8fa0;
-  --color-accent-light: #e8f4f7;
+  --color-accent: #3585a7;
+  --color-accent-light: #e8f4f9;
 
-  --color-teal-bright: #7cbad4;
+  --color-teal-bright: #7ad9eb;
 
-  --color-dark: #0e1a2b;
-  --color-dark-surface: #162032;
+  --color-dark: #001a3d;
+  --color-dark-surface: #002d64;
   --color-dark-border: rgba(255, 255, 255, 0.08);
 
   --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
@@ -223,9 +223,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(26, 107, 106, 0.25) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(42, 143, 160, 0.15) 0%, transparent 60%),
-    linear-gradient(160deg, #0e1a2b 0%, #132838 40%, #1a3345 100%);
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(5, 82, 124, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(122, 217, 235, 0.18) 0%, transparent 60%),
+    linear-gradient(160deg, #001a3d 0%, #002d64 40%, #05527c 100%);
 }
 
 .hero__particles {
@@ -375,7 +375,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .btn--primary:hover {
   background: var(--color-primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(26, 107, 106, 0.3);
+  box-shadow: 0 8px 30px rgba(5, 82, 124, 0.3);
 }
 
 .btn--outline {
@@ -810,7 +810,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(26, 107, 106, 0.1);
+  box-shadow: 0 0 0 3px rgba(5, 82, 124, 0.12);
 }
 
 .form-group input::placeholder,

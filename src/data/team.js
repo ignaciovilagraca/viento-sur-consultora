@@ -4,7 +4,7 @@ export const team = [
     photo: '/team-carlos.png',
     name: 'Dr. Carlos Falistocco',
     role: 'Médico pediatra e infectólogo · Magíster en Salud Pública.',
-    bio: 'Director Nacional SIDA y Hepatitis, Ministerio de Salud Argentina (2010–2016); representante de América Latina ante el Fondo Mundial de lucha contra el VIH, tuberculosis y malaria (2012-2016); Director Médico South Cone / LAMS / LATAM Gilead Sciences (2016–2025).',
+    bio: 'Director Nacional SIDA y Hepatitis, Ministerio de Salud Argentina (2010–2016); representante de LTM ante el Fondo Mundial de lucha contra el VIH, tuberculosis y malaria (2012-2016); Director médico Cono Sur, LAMS y LATAM Gilead Sciences (2016–2025).',
     linkedin: 'https://www.linkedin.com/in/carlos-alejandro-falistocco-205aaa16b/',
   },
   {
@@ -19,8 +19,8 @@ export const team = [
     initials: 'MV',
     photo: '/team-marcelo.png',
     name: 'Dr. Marcelo Vila',
-    role: 'Médico clínico y epidemiólogo',
-    bio: 'Especialista en Salud Pública, coordinador senior en VIH/TB/Hepatitis, OPS/OMS para Argentina y Cono Sur (2006–2025), experto en vigilancia epidemiológica y autor de publicaciones científicas internacionales.',
+    role: 'Médico clínico y epidemiólogo · Especialista en Salud Pública',
+    bio: 'Coordinador senior en VIH/TB/Hepatitis, OPS/OMS para Argentina y Cono Sur (2006–2025). Experto en vigilancia epidemiológica y autor de publicaciones científicas internacionales.',
     linkedin: 'https://www.linkedin.com/in/marcelo-eduardo-vila-2337a3a/',
   },
   {

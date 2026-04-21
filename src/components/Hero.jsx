@@ -53,7 +53,7 @@ export default function Hero() {
           <h1 className="hero__logo-title">Viento Sur</h1>
           <div className="hero__logo-divider" />
           <p className="hero__logo-sub">Consultora</p>
-          <p className="hero__logo-tagline">Asesoramiento, planificación, implementación y monitoreo en salud</p>
+          <p className="hero__logo-tagline">Estrategia e implementación en salud</p>
           <p className="hero__logo-location">Argentina · América Latina</p>
         </div>
         <p className="hero__description fade-up">

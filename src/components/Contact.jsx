@@ -65,7 +65,7 @@ export default function Contact() {
               <p className="contact__logo-title">Viento Sur</p>
               <div className="contact__logo-divider" />
               <p className="contact__logo-sub">Consultora</p>
-              <p className="contact__logo-tagline">Asesoramiento, planificación, implementación y monitoreo en salud</p>
+              <p className="contact__logo-tagline">Estrategia e implementación en salud</p>
             </div>
             <div className="contact__channels">
               <a href="mailto:info@vientosurconsultora.com" className="contact__channel">

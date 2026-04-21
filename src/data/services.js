@@ -26,7 +26,7 @@ export const services = [
     number: '03',
     title: 'Monitoreo, evaluación y gestión por resultados (RBM)',
     description:
-      'Convertimos datos en decisiones y demostramos impacto real, diseñando planes de monitoreo y evaluación.',
+      'Diseño de planes de monitoreo y evaluación, con marcos lógicos que conectan actividades con impacto medible.',
     deliverables: [
       'Plan de M&E: responsables, periodicidad, fuentes y calidad',
       'Evaluaciones de medio término y finales orientadas a decisiones programáticas',

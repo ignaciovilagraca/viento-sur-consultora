@@ -16,7 +16,7 @@ export default function Footer() {
             <img src="/logo-wind.png" alt="" className="footer__logo-icon" />
             <div>
               <p className="footer__name">Viento Sur Consultora</p>
-              <p className="footer__tagline">Asesoramiento, planificación, implementación y monitoreo en salud</p>
+              <p className="footer__tagline">Estrategia e implementación en salud</p>
             </div>
           </div>
           <nav className="footer__links">
