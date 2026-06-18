@@ -934,7 +934,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    /* When the navbar is scrolled it gets backdrop-filter, which makes it the
+       containing block for fixed descendants, collapsing this overlay to the
+       bar height. Pin to viewport height instead of relying on bottom: 0. */
+    height: 100vh;
+    height: 100dvh;
     background: var(--color-dark);
     flex-direction: column;
     align-items: center;
@@ -948,6 +952,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .nav__links.active {
     opacity: 1;
     visibility: visible;
+  }
+
+  /* Keep the logo legible over the dark menu overlay even when scrolled. */
+  .nav:has(.nav__links.active) .nav__logo-text {
+    color: white;
   }
 
   .nav__links a {
