@@ -31,11 +31,12 @@ export default function Team() {
     <section className="team" id="equipo" ref={sectionRef}>
       <div className="container">
         <header className="section-header fade-up">
-          <h2 className="section-title">Equipo Consultor</h2>
+          <h2 className="section-title">Equipo</h2>
+          <p className="section-kicker">Equipo de consultores senior</p>
           <p className="section-subtitle">
-            Equipo senior de consultores con amplia experiencia de trabajo con gobiernos, organismos
-            internacionales, comunidades e industria, que combina rigor técnico, comprensión del contexto
-            regional y capacidad de ejecución
+            El equipo de consultores cuenta con amplia experiencia de trabajo con gobiernos, organismos
+            internacionales, comunidades e industria, y combina rigor técnico, comprensión del contexto
+            regional y capacidad de ejecución.
           </p>
         </header>
         <div className="team__grid">

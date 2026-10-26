@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { useFadeUp } from '../hooks/useFadeUp';
-import { MailIcon, PhoneIcon, InstagramIcon, LinkedinIconMinimal } from './Icons';
+import { MailIcon, PhoneIcon, InstagramIcon, LinkedinIconMinimal, FacebookIcon, WebIcon } from './Icons';
 
 const GOOGLE_FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSfyys0ik-mSdq1vi_Ys-Xg-YJqYKN4oCA3GnDFJBJ80OYWh4g/formResponse';
@@ -63,16 +63,15 @@ export default function Contact() {
             <div className="contact__logo">
               <img src="/logo-wind.png" alt="" className="contact__logo-wind" />
               <p className="contact__logo-title">Viento Sur</p>
-              <div className="contact__logo-divider" />
-              <p className="contact__logo-sub">Consultora</p>
+              <p className="contact__logo-sub">Consultores</p>
               <p className="contact__logo-tagline">Estrategia e implementación en salud</p>
             </div>
             <div className="contact__channels">
-              <a href="mailto:info@vientosurconsultora.com" className="contact__channel">
+              <a href="mailto:info@vientosurconsultores.com" className="contact__channel">
                 <MailIcon />
                 <div>
                   <span className="contact__channel-label">Email</span>
-                  <span className="contact__channel-value">info@vientosurconsultora.com</span>
+                  <span className="contact__channel-value">info@vientosurconsultores.com</span>
                 </div>
               </a>
               <a href="tel:+5491141646690" className="contact__channel">
@@ -90,7 +89,7 @@ export default function Contact() {
                 </div>
               </a>
               <a
-                href="https://instagram.com/vientosur.consultora"
+                href="https://instagram.com/vientosur.consultores"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__channel"
@@ -98,11 +97,11 @@ export default function Contact() {
                 <InstagramIcon />
                 <div>
                   <span className="contact__channel-label">Instagram</span>
-                  <span className="contact__channel-value">@vientosur.consultora</span>
+                  <span className="contact__channel-value">@vientosur.consultores</span>
                 </div>
               </a>
               <a
-                href="https://www.linkedin.com/company/viento-sur-consultora"
+                href="https://www.linkedin.com/company/viento-sur-consultores"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__channel"
@@ -110,14 +109,33 @@ export default function Contact() {
                 <LinkedinIconMinimal />
                 <div>
                   <span className="contact__channel-label">LinkedIn</span>
-                  <span className="contact__channel-value">Viento Sur Consultora</span>
+                  <span className="contact__channel-value">viento-sur-consultores</span>
+                </div>
+              </a>
+              <a
+                href="https://www.facebook.com/share/14vpXLDVVLV/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact__channel"
+              >
+                <FacebookIcon />
+                <div>
+                  <span className="contact__channel-label">Facebook</span>
+                  <span className="contact__channel-value">Viento Sur Consultores</span>
+                </div>
+              </a>
+              <a href="https://www.vientosurconsultores.com" className="contact__channel">
+                <WebIcon />
+                <div>
+                  <span className="contact__channel-label">Web</span>
+                  <span className="contact__channel-value">www.vientosurconsultores.com</span>
                 </div>
               </a>
             </div>
           </div>
 
           <form className="contact__form fade-up" onSubmit={handleSubmit}>
-            <h3 className="contact__form-title">Escríbanos</h3>
+            <h3 className="contact__form-title">Envíe su consulta</h3>
             <div className="form-group">
               <label htmlFor="name">Nombre completo</label>
               <input
@@ -160,7 +178,7 @@ export default function Contact() {
                 name="message"
                 rows="4"
                 required
-                placeholder="Cuéntenos brevemente sobre su consulta..."
+                placeholder="Describa brevemente su consulta..."
                 value={form.message}
                 onChange={handleChange}
               />

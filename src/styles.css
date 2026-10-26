@@ -1,5 +1,5 @@
 /* ===================================================================
-   Viento Sur Consultora — Styles
+   Viento Sur Consultores — Styles
    =================================================================== */
 
 :root {
@@ -264,19 +264,30 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   text-transform: uppercase;
 }
 
-.hero__logo-divider {
-  width: 240px;
-  height: 1.5px;
-  background: rgba(255, 255, 255, 0.4);
-  margin: 10px 0;
-}
-
 .hero__logo-sub {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 12px;
   font-family: var(--font-serif);
   font-size: clamp(22px, 3.5vw, 32px);
   color: rgba(255, 255, 255, 0.85);
   letter-spacing: 8px;
   text-transform: uppercase;
+}
+
+/* Rules flanking "Consultores", as in the brand logo */
+.hero__logo-sub::before,
+.hero__logo-sub::after {
+  content: '';
+  width: 64px;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.hero__logo-sub::after {
+  /* Offset the trailing letter-spacing so the rules stay symmetric */
+  margin-left: -8px;
 }
 
 .hero__logo-tagline {
@@ -303,15 +314,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.6);
   font-style: italic;
-  margin-bottom: 24px;
-}
-
-.hero__claim {
-  font-family: var(--font-serif);
-  font-size: clamp(20px, 3vw, 26px);
-  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 40px;
-  line-height: 1.3;
 }
 
 .hero__actions {
@@ -403,6 +406,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-size: clamp(28px, 4.5vw, 44px);
   line-height: 1.2;
   color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.section-kicker {
+  font-family: var(--font-serif);
+  font-size: clamp(20px, 2.5vw, 24px);
+  color: var(--color-primary);
   margin-bottom: 16px;
 }
 
@@ -700,20 +710,29 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   line-height: 1;
 }
 
-.contact__logo-divider {
-  width: 200px;
-  height: 1.5px;
-  background: var(--color-primary);
-  margin: 8px 0;
-  opacity: 0.4;
-}
-
 .contact__logo-sub {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
   font-family: var(--font-serif);
   font-size: 20px;
   color: var(--color-primary);
   letter-spacing: 6px;
   text-transform: uppercase;
+}
+
+.contact__logo-sub::before,
+.contact__logo-sub::after {
+  content: '';
+  width: 40px;
+  height: 1.5px;
+  background: var(--color-primary);
+  opacity: 0.4;
+}
+
+.contact__logo-sub::after {
+  margin-left: -6px;
 }
 
 .contact__logo-tagline {
@@ -988,7 +1007,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
   .hero__content { padding: 140px 20px 100px; }
   .hero__logo-img { width: 120px; }
-  .hero__logo-divider { width: 180px; }
+  .hero__logo-sub::before, .hero__logo-sub::after { width: 40px; }
   .services { padding: 80px 0; }
   .clients { padding: 80px 0; }
   .clients__grid { grid-template-columns: 1fr; }
@@ -998,7 +1017,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .contact__form { padding: 28px; }
   .contact__logo-wind { width: 90px; }
   .contact__logo-title { font-size: 28px; }
-  .contact__logo-divider { width: 160px; }
 
   .section-header { margin-bottom: 40px; }
   .service-card { padding: 28px; }

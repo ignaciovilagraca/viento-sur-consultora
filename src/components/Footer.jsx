@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="footer__brand">
             <img src="/logo-wind.png" alt="" className="footer__logo-icon" />
             <div>
-              <p className="footer__name">Viento Sur Consultora</p>
+              <p className="footer__name">Viento Sur Consultores</p>
               <p className="footer__tagline">Estrategia e implementación en salud</p>
             </div>
           </div>
@@ -25,7 +25,7 @@ export default function Footer() {
             <a href="#equipo" onClick={handleClick}>Equipo</a>
             <a href="#contacto" onClick={handleClick}>Contacto</a>
           </nav>
-          <p className="footer__copy">&copy; 2026 Viento Sur Consultora. Todos los derechos reservados.</p>
+          <p className="footer__copy">&copy; 2026 Viento Sur Consultores. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
