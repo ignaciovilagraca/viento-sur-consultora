@@ -1,7 +1,7 @@
 export const services = [
   {
     number: '01',
-    title: 'Estrategia y Planificación Programática',
+    title: 'Estrategia y planificación programática',
     description:
       'Análisis de contexto epidemiológico-programático, priorización de brechas y construcción de hojas de ruta con responsabilidades e hitos verificables.',
     deliverables: [
@@ -35,7 +35,7 @@ export const services = [
   },
   {
     number: '04',
-    title: 'Implementación y Fortalecimiento de Capacidades',
+    title: 'Implementación y fortalecimiento de capacidades',
     description:
       'Acompañamiento a la ejecución territorial y transferencia de herramientas a los equipos de trabajo.',
     deliverables: [

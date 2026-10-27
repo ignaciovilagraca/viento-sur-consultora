@@ -1,6 +1,15 @@
 import { useState, useCallback } from 'react';
+import { track } from '@vercel/analytics';
 import { useFadeUp } from '../hooks/useFadeUp';
-import { MailIcon, PhoneIcon, InstagramIcon, LinkedinIconMinimal, FacebookIcon, WebIcon } from './Icons';
+import {
+  MailIcon,
+  PhoneIcon,
+  WhatsappIcon,
+  InstagramIcon,
+  LinkedinIconMinimal,
+  FacebookIcon,
+  WebIcon,
+} from './Icons';
 
 const GOOGLE_FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSfyys0ik-mSdq1vi_Ys-Xg-YJqYKN4oCA3GnDFJBJ80OYWh4g/formResponse';
@@ -35,6 +44,8 @@ export default function Contact() {
       });
 
       try {
+        // With no-cors the response is opaque: fetch only rejects when the
+        // request never reaches Google (offline, blocked, DNS).
         await fetch(GOOGLE_FORM_URL, {
           method: 'POST',
           mode: 'no-cors',
@@ -42,9 +53,11 @@ export default function Contact() {
           body: body.toString(),
         });
       } catch {
-        // Google Forms returns opaque response with no-cors; submission still succeeds
+        setStatus('error');
+        return;
       }
 
+      track('Consulta enviada');
       setStatus('sent');
       setForm(INITIAL_STATE);
       setTimeout(() => setStatus('idle'), 3000);
@@ -81,6 +94,18 @@ export default function Contact() {
                   <span className="contact__channel-value">+54 911 41646690</span>
                 </div>
               </a>
+              <a
+                href="https://wa.me/5491141646690"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact__channel"
+              >
+                <WhatsappIcon />
+                <div>
+                  <span className="contact__channel-label">WhatsApp</span>
+                  <span className="contact__channel-value">+54 911 41646690</span>
+                </div>
+              </a>
               <a href="tel:+17862390333" className="contact__channel">
                 <PhoneIcon />
                 <div>
@@ -89,7 +114,7 @@ export default function Contact() {
                 </div>
               </a>
               <a
-                href="https://instagram.com/vientosur.consultores"
+                href="https://www.instagram.com/vientosurconsultores/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__channel"
@@ -97,11 +122,11 @@ export default function Contact() {
                 <InstagramIcon />
                 <div>
                   <span className="contact__channel-label">Instagram</span>
-                  <span className="contact__channel-value">@vientosur.consultores</span>
+                  <span className="contact__channel-value">@vientosurconsultores</span>
                 </div>
               </a>
               <a
-                href="https://www.linkedin.com/company/viento-sur-consultores"
+                href="https://www.linkedin.com/company/vientosurconsultores"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__channel"
@@ -109,7 +134,7 @@ export default function Contact() {
                 <LinkedinIconMinimal />
                 <div>
                   <span className="contact__channel-label">LinkedIn</span>
-                  <span className="contact__channel-value">viento-sur-consultores</span>
+                  <span className="contact__channel-value">vientosurconsultores</span>
                 </div>
               </a>
               <a
@@ -183,14 +208,25 @@ export default function Contact() {
                 onChange={handleChange}
               />
             </div>
+            <p className="form-privacy">
+              Sus datos se usan solo para responder la consulta. Puede pedir acceder a ellos,
+              corregirlos o eliminarlos escribiendo a info@vientosurconsultores.com (Ley 25.326 de
+              Protección de los Datos Personales).
+            </p>
             <button
               type="submit"
               className="btn btn--primary btn--full"
-              disabled={status !== 'idle'}
+              disabled={status === 'sending' || status === 'sent'}
               style={status === 'sent' ? { background: 'var(--color-accent)' } : undefined}
             >
               {buttonText}
             </button>
+            {status === 'error' && (
+              <p className="form-error" role="alert">
+                No se pudo enviar el mensaje. Revise su conexión e intente de nuevo, o escriba a
+                info@vientosurconsultores.com.
+              </p>
+            )}
           </form>
         </div>
       </div>

@@ -24,7 +24,7 @@ export default function Services() {
     <section className="services" id="servicios" ref={sectionRef}>
       <div className="container">
         <header className="section-header fade-up">
-          <h2 className="section-title">Capacidades y Propuestas de Intervención</h2>
+          <h2 className="section-title">Capacidades y propuestas de intervención</h2>
         </header>
         <div className="services__grid">
           {services.map((s) => (
