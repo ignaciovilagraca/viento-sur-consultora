@@ -53,12 +53,9 @@ export default function Hero() {
           <h1 className="hero__logo-title">Viento Sur</h1>
           <p className="hero__logo-sub">Consultores</p>
           <p className="hero__logo-tagline">Estrategia e implementación en salud</p>
-          <p className="hero__logo-location">Argentina · América Latina</p>
         </div>
         <p className="hero__description fade-up">
-          El equipo de consultores senior trabaja para fortalecer el desempeño de programas y proyectos
-          de salud, con énfasis en enfermedades transmisibles (VIH/ITS, hepatitis virales, tuberculosis) y un enfoque
-          transversal de equidad, género y derechos.
+          Consultores senior en programas y proyectos de salud para Argentina y América Latina.
         </p>
         <div className="hero__actions fade-up">
           <a href="#servicios" className="btn btn--primary" onClick={handleClick}>
@@ -68,10 +65,6 @@ export default function Hero() {
             Contacto
           </a>
         </div>
-      </div>
-      <div className="hero__scroll">
-        <span>Scroll</span>
-        <div className="hero__scroll-line" />
       </div>
     </section>
   );

@@ -90,6 +90,15 @@ export function PhoneIcon() {
   );
 }
 
+export function WhatsappIcon() {
+  return (
+    <svg {...svgProps}>
+      <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+      <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+    </svg>
+  );
+}
+
 export function InstagramIcon() {
   return (
     <svg {...svgProps}>
@@ -149,6 +158,7 @@ const iconMap = {
   shield: ShieldIcon,
   mail: MailIcon,
   phone: PhoneIcon,
+  whatsapp: WhatsappIcon,
   instagram: InstagramIcon,
   linkedin: LinkedinIcon,
   facebook: FacebookIcon,
