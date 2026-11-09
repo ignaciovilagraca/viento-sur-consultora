@@ -48,12 +48,13 @@ export default function Hero() {
         <Particles />
       </div>
       <div className="hero__content">
-        <div className="hero__logo fade-up">
-          <img src="/logo-wind.png" alt="" className="hero__logo-img" />
-          <h1 className="hero__logo-title">Viento Sur</h1>
-          <p className="hero__logo-sub">Consultores</p>
-          <p className="hero__logo-tagline">Estrategia e implementación en salud</p>
-        </div>
+        <h1 className="hero__logo fade-up">
+          <img
+            src="/logo-vertical-blanco.svg"
+            alt="Viento Sur Consultores. Estrategia e implementación en salud"
+            className="hero__logo-img"
+          />
+        </h1>
         <p className="hero__description fade-up">
           Consultores senior en programas y proyectos de salud para Argentina y América Latina.
         </p>

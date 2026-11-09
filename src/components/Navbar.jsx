@@ -35,8 +35,7 @@ export default function Navbar() {
     <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
       <div className="nav__inner">
         <a href="#hero" className="nav__logo" onClick={handleLinkClick}>
-          <img src="/logo-wind.png" alt="Viento Sur" className="nav__logo-icon" />
-          <span className="nav__logo-text">Viento Sur</span>
+          <img src="/logo-horizontal-blanco.svg" alt="Viento Sur Consultores" className="nav__logo-img" />
         </a>
         <button
           className={`nav__toggle${menuOpen ? ' active' : ''}`}
@@ -49,6 +48,7 @@ export default function Navbar() {
           <li><a href="#servicios" onClick={handleLinkClick}>Servicios</a></li>
           <li><a href="#clientes" onClick={handleLinkClick}>Clientes</a></li>
           <li><a href="#equipo" onClick={handleLinkClick}>Equipo</a></li>
+          <li><a href="#novedades" onClick={handleLinkClick}>Novedades</a></li>
           <li><a href="#contacto" className="nav__cta" onClick={handleLinkClick}>Contacto</a></li>
         </ul>
       </div>
