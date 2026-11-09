@@ -60,7 +60,13 @@ export default function Hero() {
         </p>
         <div className="hero__actions fade-up">
           <a href="#servicios" className="btn btn--primary" onClick={handleClick}>
-            Capacidades y propuestas
+            Capacidades
+          </a>
+          <a href="#clientes" className="btn btn--outline" onClick={handleClick}>
+            Sectores e instituciones destinatarias
+          </a>
+          <a href="#equipo" className="btn btn--outline" onClick={handleClick}>
+            Equipo
           </a>
           <a href="#contacto" className="btn btn--outline" onClick={handleClick}>
             Contacto

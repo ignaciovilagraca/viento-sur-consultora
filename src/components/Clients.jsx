@@ -9,7 +9,7 @@ export default function Clients() {
     <section className="clients" id="clientes" ref={sectionRef}>
       <div className="container">
         <header className="section-header fade-up">
-          <h2 className="section-title">Servicios dirigidos a:</h2>
+          <h2 className="section-title">Sectores e instituciones destinatarias</h2>
         </header>
         <div className="clients__grid fade-up">
           {clients.map((c) => (

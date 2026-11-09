@@ -217,7 +217,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   position: relative;
   z-index: 1;
   text-align: center;
-  max-width: 720px;
+  max-width: 880px;
   padding: 120px 24px 80px;
 }
 
