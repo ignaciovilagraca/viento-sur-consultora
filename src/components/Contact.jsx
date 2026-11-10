@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { track } from '@vercel/analytics';
 import { useFadeUp } from '../hooks/useFadeUp';
+import { enviar } from '../lib/enviar';
 import {
   MailIcon,
   PhoneIcon,
@@ -10,16 +11,6 @@ import {
   FacebookIcon,
   WebIcon,
 } from './Icons';
-
-const GOOGLE_FORM_URL =
-  'https://docs.google.com/forms/d/e/1FAIpQLSfyys0ik-mSdq1vi_Ys-Xg-YJqYKN4oCA3GnDFJBJ80OYWh4g/formResponse';
-
-const FIELD_MAP = {
-  name: 'entry.1559024165',
-  email: 'entry.1344643477',
-  org: 'entry.741318481',
-  message: 'entry.1177337723',
-};
 
 const INITIAL_STATE = { name: '', email: '', org: '', message: '' };
 
@@ -38,20 +29,17 @@ export default function Contact() {
       e.preventDefault();
       setStatus('sending');
 
-      const body = new URLSearchParams();
-      Object.entries(FIELD_MAP).forEach(([key, entry]) => {
-        body.append(entry, form[key]);
-      });
-
       try {
-        // With no-cors the response is opaque: fetch only rejects when the
-        // request never reaches Google (offline, blocked, DNS).
-        await fetch(GOOGLE_FORM_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: body.toString(),
-        });
+        await enviar(
+          `Consulta web: ${form.name}`,
+          {
+            Nombre: form.name,
+            Correo: form.email,
+            Organización: form.org || '(no indicó)',
+            Mensaje: form.message,
+          },
+          form.email,
+        );
       } catch {
         setStatus('error');
         return;
@@ -74,10 +62,11 @@ export default function Contact() {
         <div className="contact__inner">
           <div className="contact__info fade-up">
             <div className="contact__logo">
-              <img src="/logo-wind.png" alt="" className="contact__logo-wind" />
-              <p className="contact__logo-title">Viento Sur</p>
-              <p className="contact__logo-sub">Consultores</p>
-              <p className="contact__logo-tagline">Estrategia e implementación en salud</p>
+              <img
+                src="/logo-vertical-color.svg"
+                alt="Viento Sur Consultores. Estrategia e implementación en salud"
+                className="contact__logo-img"
+              />
             </div>
             <div className="contact__channels">
               <a href="mailto:info@vientosurconsultores.com" className="contact__channel">
@@ -160,7 +149,7 @@ export default function Contact() {
           </div>
 
           <form className="contact__form fade-up" onSubmit={handleSubmit}>
-            <h3 className="contact__form-title">Envíe su consulta</h3>
+            <h3 className="contact__form-title">Envíennos su consulta</h3>
             <div className="form-group">
               <label htmlFor="name">Nombre completo</label>
               <input
@@ -168,7 +157,7 @@ export default function Contact() {
                 id="name"
                 name="name"
                 required
-                placeholder="Su nombre"
+                placeholder="Nombre y apellido"
                 value={form.name}
                 onChange={handleChange}
               />
@@ -203,13 +192,13 @@ export default function Contact() {
                 name="message"
                 rows="4"
                 required
-                placeholder="Describa brevemente su consulta..."
+                placeholder="Describan brevemente su consulta..."
                 value={form.message}
                 onChange={handleChange}
               />
             </div>
             <p className="form-privacy">
-              Sus datos se usan solo para responder la consulta. Puede pedir acceder a ellos,
+              Sus datos se usan solo para responder la consulta. Pueden pedir acceder a ellos,
               corregirlos o eliminarlos escribiendo a info@vientosurconsultores.com (Ley 25.326 de
               Protección de los Datos Personales).
             </p>
@@ -217,13 +206,13 @@ export default function Contact() {
               type="submit"
               className="btn btn--primary btn--full"
               disabled={status === 'sending' || status === 'sent'}
-              style={status === 'sent' ? { background: 'var(--color-accent)' } : undefined}
+              style={status === 'sent' ? { background: 'var(--color-dark)' } : undefined}
             >
               {buttonText}
             </button>
             {status === 'error' && (
               <p className="form-error" role="alert">
-                No se pudo enviar el mensaje. Revise su conexión e intente de nuevo, o escriba a
+                No se pudo enviar el mensaje. Revisen su conexión e intenten de nuevo, o escriban a
                 info@vientosurconsultores.com.
               </p>
             )}

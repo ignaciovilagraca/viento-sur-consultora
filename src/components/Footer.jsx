@@ -13,16 +13,17 @@ export default function Footer() {
       <div className="container">
         <div className="footer__inner">
           <div className="footer__brand">
-            <img src="/logo-wind.png" alt="" className="footer__logo-icon" />
-            <div>
-              <p className="footer__name">Viento Sur Consultores</p>
-              <p className="footer__tagline">Estrategia e implementación en salud</p>
-            </div>
+            <img
+              src="/logo-horizontal-blanco.svg"
+              alt="Viento Sur Consultores. Estrategia e implementación en salud"
+              className="footer__logo-img"
+            />
           </div>
           <nav className="footer__links">
-            <a href="#servicios" onClick={handleClick}>Servicios</a>
-            <a href="#clientes" onClick={handleClick}>Clientes</a>
+            <a href="#servicios" onClick={handleClick}>Capacidades</a>
+            <a href="#clientes" onClick={handleClick}>Sectores e instituciones destinatarias</a>
             <a href="#equipo" onClick={handleClick}>Equipo</a>
+            <a href="#novedades" onClick={handleClick}>Novedades</a>
             <a href="#contacto" onClick={handleClick}>Contacto</a>
           </nav>
           <p className="footer__copy">&copy; 2026 Viento Sur Consultores. Todos los derechos reservados.</p>
