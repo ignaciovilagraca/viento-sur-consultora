@@ -62,13 +62,13 @@ export default function Hero() {
           <a href="#servicios" className="btn btn--primary" onClick={handleClick}>
             Capacidades
           </a>
-          <a href="#clientes" className="btn btn--outline" onClick={handleClick}>
+          <a href="#clientes" className="btn btn--primary" onClick={handleClick}>
             Sectores e instituciones destinatarias
           </a>
-          <a href="#equipo" className="btn btn--outline" onClick={handleClick}>
+          <a href="#equipo" className="btn btn--primary" onClick={handleClick}>
             Equipo
           </a>
-          <a href="#contacto" className="btn btn--outline" onClick={handleClick}>
+          <a href="#contacto" className="btn btn--primary" onClick={handleClick}>
             Contacto
           </a>
         </div>
