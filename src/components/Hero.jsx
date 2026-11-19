@@ -62,6 +62,9 @@ export default function Hero() {
           <a href="#servicios" className="btn btn--outline" onClick={handleClick}>
             Ver capacidades
           </a>
+          <a href="#equipo" className="btn btn--outline" onClick={handleClick}>
+            Ver equipo
+          </a>
         </div>
       </div>
     </section>

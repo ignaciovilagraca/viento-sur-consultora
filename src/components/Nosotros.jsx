@@ -1,9 +1,6 @@
 import { useFadeUp } from '../hooks/useFadeUp';
 import { Icon } from './Icons';
 
-// Áreas temáticas y enfoque: texto del folleto vigente (v14, 10/11/26)
-const areas = ['VIH e ITS', 'Hepatitis virales', 'Tuberculosis'];
-
 // Mensajes clave de la Estrategia de comunicación
 const razones = [
   {
@@ -16,18 +13,13 @@ const razones = [
     icon: 'chart',
     titulo: 'De los datos a la decisión',
     texto:
-      'Indicadores con definiciones claras y análisis pensados para gestionar, no informes que quedan en un cajón.',
+      'Indicadores con definiciones claras y análisis orientados a las decisiones de gestión.',
   },
   {
     icon: 'pin',
     titulo: 'Implementación',
     texto:
       'Acompañamos la ejecución en terreno, además del diseño, y transferimos las herramientas a los equipos que las van a usar.',
-  },
-  {
-    icon: 'shield',
-    titulo: 'Transparencia',
-    texto: 'Política explícita de conflicto de interés en el trabajo con la industria.',
   },
 ];
 
@@ -56,20 +48,6 @@ export default function Nosotros() {
     <section className="nosotros" id="nosotros" ref={sectionRef}>
       <Olas />
       <div className="container">
-        <div className="areas fade-up">
-          <p className="areas__label">Foco temático</p>
-          <ul className="areas__lista">
-            {areas.map((a) => (
-              <li key={a} className="areas__item">
-                {a}
-              </li>
-            ))}
-          </ul>
-          <p className="areas__enfoque">
-            Con un enfoque transversal de <strong>equidad, género y derechos</strong>.
-          </p>
-        </div>
-
         <header className="section-header fade-up">
           <h2 className="section-title">Por qué Viento Sur</h2>
         </header>

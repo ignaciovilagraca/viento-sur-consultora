@@ -1079,6 +1079,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   padding: 0 0 110px;
 }
 
+.nosotros .section-header { margin-top: 56px; }
+
 .nosotros__olas {
   display: block;
   width: 100%;
@@ -1132,7 +1134,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .razones {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -1313,7 +1315,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .newsletter .form-privacy { color: rgba(255, 255, 255, 0.78); }
 
 @media (max-width: 1024px) {
-  .razones { grid-template-columns: repeat(2, 1fr); }
+  .razones { grid-template-columns: 1fr; }
   .team__grid { grid-template-columns: 1fr; }
 }
 
@@ -1321,8 +1323,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .hero { min-height: auto; }
   .hero__content { padding: 130px 20px 56px; }
   .hero__eyebrow { font-size: 12px; letter-spacing: 2px; }
-  .areas { margin-bottom: 64px; }
-  .areas__item { padding: 8px 20px; }
+  .nosotros .section-header { margin-top: 32px; }
   .razones { grid-template-columns: 1fr; }
   .team-card { flex-direction: column; align-items: center; text-align: center; padding: 28px 22px; }
   .team-card__body { align-items: center; }
