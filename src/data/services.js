@@ -1,6 +1,7 @@
 export const services = [
   {
     number: '01',
+    icon: 'target',
     title: 'Estrategia y planificación programática',
     description:
       'Análisis de contexto epidemiológico-programático, priorización de brechas y construcción de hojas de ruta con responsabilidades e hitos verificables.',
@@ -13,6 +14,7 @@ export const services = [
   },
   {
     number: '02',
+    icon: 'chart',
     title: 'Sistemas de información e inteligencia estratégica',
     description:
       'Análisis programáticos, indicadores con definiciones operativas, datos trazables y rutinas que convierten información en decisiones de gestión.',
@@ -24,6 +26,7 @@ export const services = [
   },
   {
     number: '03',
+    icon: 'trend',
     title: 'Monitoreo, evaluación y gestión por resultados',
     description:
       'Diseño de planes de monitoreo y evaluación, con marcos lógicos que conectan actividades con impacto medible.',
@@ -35,6 +38,7 @@ export const services = [
   },
   {
     number: '04',
+    icon: 'people',
     title: 'Implementación y fortalecimiento de capacidades',
     description:
       'Acompañamiento a la ejecución territorial y transferencia de herramientas a los equipos de trabajo.',

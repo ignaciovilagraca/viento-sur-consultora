@@ -147,7 +147,48 @@ export function WebIcon() {
   );
 }
 
+export function TargetIcon() {
+  return (
+    <svg {...svgProps}>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="12" cy="12" r="1" />
+      <path d="M12 3V1M21 12h2" />
+    </svg>
+  );
+}
+
+export function ChartIcon() {
+  return (
+    <svg {...svgProps}>
+      <path d="M3 21h18M6 17v-5M10 17V7M14 17v-8M18 17V4" />
+    </svg>
+  );
+}
+
+export function TrendIcon() {
+  return (
+    <svg {...svgProps}>
+      <path d="M3 3v18h18M7 15l4-4 3 3 6-7" />
+      <path d="M16 7h4v4" />
+    </svg>
+  );
+}
+
+export function MapPinIcon() {
+  return (
+    <svg {...svgProps}>
+      <path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" />
+      <circle cx="12" cy="9.5" r="2.5" />
+    </svg>
+  );
+}
+
 const iconMap = {
+  target: TargetIcon,
+  chart: ChartIcon,
+  trend: TrendIcon,
+  pin: MapPinIcon,
   building: BuildingIcon,
   health: HealthIcon,
   book: BookIcon,

@@ -48,32 +48,19 @@ export default function Hero() {
         <Particles />
       </div>
       <div className="hero__content">
-        <h1 className="hero__logo fade-up">
-          <span className="visually-hidden">
-            Viento Sur Consultores. Estrategia e implementación en salud
-          </span>
-          <img
-            src="/logo-vertical-blanco.svg"
-            alt=""
-            aria-hidden="true"
-            className="hero__logo-img"
-          />
-        </h1>
+        <p className="hero__eyebrow fade-up">Argentina · América Latina</p>
+        <h1 className="hero__title fade-up">Estrategia e implementación en salud</h1>
         <p className="hero__description fade-up">
-          Consultores senior en programas y proyectos de salud para Argentina y América Latina.
+          Equipo de consultores senior orientado a fortalecer el desempeño de programas y proyectos
+          de salud, con énfasis en enfermedades transmisibles (VIH/ITS, hepatitis virales y
+          tuberculosis) y un enfoque transversal de equidad, género y derechos.
         </p>
         <div className="hero__actions fade-up">
-          <a href="#servicios" className="btn btn--primary" onClick={handleClick}>
-            Capacidades
-          </a>
-          <a href="#equipo" className="btn btn--primary" onClick={handleClick}>
-            Equipo
-          </a>
-          <a href="#clientes" className="btn btn--primary" onClick={handleClick}>
-            Sectores e instituciones destinatarias
-          </a>
           <a href="#contacto" className="btn btn--primary" onClick={handleClick}>
-            Contacto
+            Conversemos
+          </a>
+          <a href="#servicios" className="btn btn--outline" onClick={handleClick}>
+            Ver capacidades
           </a>
         </div>
       </div>

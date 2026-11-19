@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Nosotros from './components/Nosotros';
 import Services from './components/Services';
 import Clients from './components/Clients';
 import Team from './components/Team';
@@ -12,6 +13,7 @@ export default function App() {
     <>
       <Navbar />
       <Hero />
+      <Nosotros />
       <Services />
       <Team />
       <Clients />
