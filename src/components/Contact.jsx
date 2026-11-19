@@ -9,7 +9,6 @@ import {
   InstagramIcon,
   LinkedinIconMinimal,
   FacebookIcon,
-  WebIcon,
 } from './Icons';
 
 const INITIAL_STATE = { name: '', email: '', org: '', message: '' };
@@ -76,13 +75,6 @@ export default function Contact() {
                   <span className="contact__channel-value">info@vientosurconsultores.com</span>
                 </div>
               </a>
-              <a href="tel:+5491141646690" className="contact__channel">
-                <PhoneIcon />
-                <div>
-                  <span className="contact__channel-label">Teléfono</span>
-                  <span className="contact__channel-value">+54 911 41646690</span>
-                </div>
-              </a>
               <a
                 href="https://wa.me/5491141646690"
                 target="_blank"
@@ -91,27 +83,8 @@ export default function Contact() {
               >
                 <WhatsappIcon />
                 <div>
-                  <span className="contact__channel-label">WhatsApp</span>
+                  <span className="contact__channel-label">Teléfono y WhatsApp</span>
                   <span className="contact__channel-value">+54 911 41646690</span>
-                </div>
-              </a>
-              <a href="tel:+17862390333" className="contact__channel">
-                <PhoneIcon />
-                <div>
-                  <span className="contact__channel-label">Teléfono</span>
-                  <span className="contact__channel-value">+1 786 2390333</span>
-                </div>
-              </a>
-              <a
-                href="https://www.instagram.com/vientosurconsultores/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact__channel"
-              >
-                <InstagramIcon />
-                <div>
-                  <span className="contact__channel-label">Instagram</span>
-                  <span className="contact__channel-value">@vientosurconsultores</span>
                 </div>
               </a>
               <a
@@ -126,24 +99,27 @@ export default function Contact() {
                   <span className="contact__channel-value">vientosurconsultores</span>
                 </div>
               </a>
+            </div>
+            <div className="contact__secondary">
+              <a
+                href="https://www.instagram.com/vientosurconsultores/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <InstagramIcon />
+                <span>@vientosurconsultores</span>
+              </a>
               <a
                 href="https://www.facebook.com/vientosurconsultores"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact__channel"
               >
                 <FacebookIcon />
-                <div>
-                  <span className="contact__channel-label">Facebook</span>
-                  <span className="contact__channel-value">Viento Sur Consultores</span>
-                </div>
+                <span>Viento Sur Consultores</span>
               </a>
-              <a href="https://www.vientosurconsultores.com" className="contact__channel">
-                <WebIcon />
-                <div>
-                  <span className="contact__channel-label">Web</span>
-                  <span className="contact__channel-value">www.vientosurconsultores.com</span>
-                </div>
+              <a href="tel:+17862390333">
+                <PhoneIcon />
+                <span>+1 786 2390333</span>
               </a>
             </div>
           </div>

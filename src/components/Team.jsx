@@ -12,20 +12,22 @@ function TeamCard({ photo, initials, name, role, bio, linkedin }) {
           <span>{initials}</span>
         )}
       </div>
-      <h3 className="team-card__name">{name}</h3>
-      <p className="team-card__role">{role}</p>
-      <p className="team-card__bio">{bio}</p>
-      {linkedin && (
-        <a
-          href={linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="team-card__linkedin"
-          aria-label={`LinkedIn de ${name} (se abre en otra pestaña)`}
-        >
-          <LinkedinIcon />
-        </a>
-      )}
+      <div className="team-card__body">
+        <h3 className="team-card__name">{name}</h3>
+        <p className="team-card__role">{role}</p>
+        <p className="team-card__bio">{bio}</p>
+        {linkedin && (
+          <a
+            href={linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="team-card__linkedin"
+            aria-label={`LinkedIn de ${name} (se abre en otra pestaña)`}
+          >
+            <LinkedinIcon />
+          </a>
+        )}
+      </div>
     </article>
   );
 }
@@ -38,11 +40,10 @@ export default function Team() {
       <div className="container">
         <header className="section-header fade-up">
           <h2 className="section-title">Equipo</h2>
-          <p className="section-kicker">Equipo de consultores senior</p>
           <p className="section-subtitle">
-            El equipo de consultores cuenta con amplia experiencia de trabajo con gobiernos, organismos
-            internacionales, comunidades e industria, y combina rigor técnico, comprensión del contexto
-            regional y capacidad de ejecución.
+            Equipo de consultores senior con amplia experiencia de trabajo con gobiernos, organismos
+            internacionales, comunidades e industria, que combina rigor técnico, comprensión del
+            contexto regional y capacidad de ejecución.
           </p>
         </header>
         <div className="team__grid">
