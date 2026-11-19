@@ -49,9 +49,13 @@ export default function Hero() {
       </div>
       <div className="hero__content">
         <h1 className="hero__logo fade-up">
+          <span className="visually-hidden">
+            Viento Sur Consultores. Estrategia e implementación en salud
+          </span>
           <img
             src="/logo-vertical-blanco.svg"
-            alt="Viento Sur Consultores. Estrategia e implementación en salud"
+            alt=""
+            aria-hidden="true"
             className="hero__logo-img"
           />
         </h1>
@@ -62,11 +66,11 @@ export default function Hero() {
           <a href="#servicios" className="btn btn--primary" onClick={handleClick}>
             Capacidades
           </a>
-          <a href="#clientes" className="btn btn--primary" onClick={handleClick}>
-            Sectores e instituciones destinatarias
-          </a>
           <a href="#equipo" className="btn btn--primary" onClick={handleClick}>
             Equipo
+          </a>
+          <a href="#clientes" className="btn btn--primary" onClick={handleClick}>
+            Sectores e instituciones destinatarias
           </a>
           <a href="#contacto" className="btn btn--primary" onClick={handleClick}>
             Contacto

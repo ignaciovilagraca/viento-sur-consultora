@@ -16,7 +16,13 @@ function TeamCard({ photo, initials, name, role, bio, linkedin }) {
       <p className="team-card__role">{role}</p>
       <p className="team-card__bio">{bio}</p>
       {linkedin && (
-        <a href={linkedin} target="_blank" rel="noopener noreferrer" className="team-card__linkedin">
+        <a
+          href={linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="team-card__linkedin"
+          aria-label={`LinkedIn de ${name} (se abre en otra pestaña)`}
+        >
           <LinkedinIcon />
         </a>
       )}
