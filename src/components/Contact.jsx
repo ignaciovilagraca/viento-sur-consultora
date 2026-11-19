@@ -127,7 +127,7 @@ export default function Contact() {
                 </div>
               </a>
               <a
-                href="https://www.facebook.com/share/14vpXLDVVLV/"
+                href="https://www.facebook.com/vientosurconsultores"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__channel"

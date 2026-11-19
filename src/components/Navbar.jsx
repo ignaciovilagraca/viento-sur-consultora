@@ -46,8 +46,9 @@ export default function Navbar() {
         </button>
         <ul className={`nav__links${menuOpen ? ' active' : ''}`}>
           <li><a href="#servicios" onClick={handleLinkClick}>Capacidades</a></li>
-          <li><a href="#clientes" onClick={handleLinkClick}>Sectores e instituciones destinatarias</a></li>
           <li><a href="#equipo" onClick={handleLinkClick}>Equipo</a></li>
+          <li><a href="#clientes" onClick={handleLinkClick}>Sectores e instituciones destinatarias</a></li>
+          <li><a href="#novedades" onClick={handleLinkClick}>Novedades</a></li>
           <li><a href="#contacto" className="nav__cta" onClick={handleLinkClick}>Contacto</a></li>
         </ul>
       </div>

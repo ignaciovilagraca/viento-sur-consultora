@@ -111,7 +111,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .nav--scrolled .nav__logo-img {
-  width: 240px;
+  width: 300px;
 }
 
 .nav__links {
@@ -121,6 +121,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .nav__links a {
+  white-space: nowrap;
   font-size: 15px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
@@ -237,7 +238,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-size: 17px;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.6);
-  font-style: italic;
   margin-bottom: 40px;
 }
 
@@ -381,7 +381,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .service-card__title {
-  font-size: 20px;
+  font-family: var(--font-serif);
+  font-size: 22px;
   font-weight: 600;
   margin-bottom: 12px;
   line-height: 1.3;
@@ -393,7 +394,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: var(--color-text-secondary);
   line-height: 1.7;
   margin-bottom: 16px;
-  font-style: italic;
 }
 
 .service-card__label {
@@ -528,7 +528,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .team-card__name {
-  font-size: 18px;
+  font-family: var(--font-serif);
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -936,7 +937,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .novedades__inner { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .nav__toggle { display: flex; }
 
   .nav__links {
@@ -990,10 +991,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     transform: rotate(-45deg) translate(5px, -5px);
     background: white;
   }
+}
+
+@media (max-width: 768px) {
 
   .hero__content { padding: 140px 20px 100px; }
   .hero__logo-img { width: 260px; }
-  .nav__logo-img, .nav--scrolled .nav__logo-img { width: 220px; }
   .services { padding: 80px 0; }
   .clients { padding: 80px 0; }
   .clients__grid { grid-template-columns: 1fr; }
@@ -1017,4 +1020,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 @media (max-width: 480px) {
   .hero__actions { flex-direction: column; align-items: center; }
   .btn { width: 100%; justify-content: center; }
+}
+
+
+/* Pantallas muy angostas: el logo de 300 px no entra junto al botón de menú */
+@media (max-width: 370px) {
+  .nav__logo-img, .nav--scrolled .nav__logo-img { width: 250px; }
 }
