@@ -13,7 +13,7 @@ export const team = [
     name: 'Dra. Clarisa Brezzo',
     role: 'Médica infectóloga y especialista en cooperación internacional',
     bio: 'Asesora técnica senior en ONUSIDA para Argentina, Chile, Paraguay y Uruguay (2005–2026). Especialista en monitoreo y evaluación (M&E), planificación estratégica y políticas de salud.',
-    linkedin: 'https://www.linkedin.com/in/brezzo-clarisa-6775b429/',
+    linkedin: 'https://www.linkedin.com/in/clarisa-brezzo-6775b429/',
   },
   {
     initials: 'MV',
