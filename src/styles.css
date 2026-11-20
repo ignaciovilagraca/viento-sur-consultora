@@ -1332,3 +1332,52 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .team-card__bio { text-align: left; }
   .footer__links { flex-wrap: wrap; justify-content: center; gap: 12px 24px; }
 }
+
+/* Recuadro de la última nota en la portada */
+.ultima-nota {
+  display: block;
+  max-width: 620px;
+  margin: 44px auto 0;
+  padding: 22px 28px;
+  text-align: left;
+  border: 1.5px solid var(--color-accent);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  transition: var(--transition);
+}
+
+.ultima-nota:hover { background: rgba(255, 255, 255, 0.12); transform: translateY(-2px); }
+
+.ultima-nota__meta {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+
+.ultima-nota__titulo {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 26px;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.ultima-nota__texto {
+  display: block;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 10px;
+}
+
+.ultima-nota__leer { font-size: 16px; font-weight: 600; color: var(--color-accent); }
+
+@media (max-width: 768px) {
+  .ultima-nota { margin-top: 32px; padding: 18px 20px; }
+  .ultima-nota__titulo { font-size: 22px; }
+}

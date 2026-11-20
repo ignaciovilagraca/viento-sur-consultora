@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useFadeUp } from '../hooks/useFadeUp';
+import UltimaNota from './UltimaNota';
 
 function Particles() {
   const containerRef = useRef(null);
@@ -66,6 +67,7 @@ export default function Hero() {
             Ver equipo
           </a>
         </div>
+        <UltimaNota />
       </div>
     </section>
   );
