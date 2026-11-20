@@ -7,8 +7,33 @@
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/pc-linkedin",
+      "destination": "/novedades/prevencion-combinada?utm_source=linkedin&utm_medium=social&utm_campaign=prevencion-combinada",
+      "permanent": false
+    },
+    {
+      "source": "/pc-facebook",
+      "destination": "/novedades/prevencion-combinada?utm_source=facebook&utm_medium=social&utm_campaign=prevencion-combinada",
+      "permanent": false
+    },
+    {
+      "source": "/pc-instagram",
+      "destination": "/novedades/prevencion-combinada?utm_source=instagram&utm_medium=social&utm_campaign=prevencion-combinada",
+      "permanent": false
+    },
+    {
+      "source": "/pc-correo",
+      "destination": "/novedades/prevencion-combinada?utm_source=correo&utm_medium=email&utm_campaign=prevencion-combinada",
+      "permanent": false
     }
   ]
 }
