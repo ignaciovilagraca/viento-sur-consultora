@@ -96,9 +96,13 @@ export default function Novedades() {
                   </time>
                   <h3 className="novedad__titulo">
                     {n.enlace ? (
-                      <a href={n.enlace} target="_blank" rel="noopener noreferrer">
-                        {n.titulo}
-                      </a>
+                      n.enlace.startsWith('/') ? (
+                        <a href={n.enlace}>{n.titulo}</a>
+                      ) : (
+                        <a href={n.enlace} target="_blank" rel="noopener noreferrer">
+                          {n.titulo}
+                        </a>
+                      )
                     ) : (
                       n.titulo
                     )}
