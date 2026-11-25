@@ -4,6 +4,13 @@
 // destacado es opcional: la frase que muestra el recuadro de la portada (si falta, usa el resumen).
 export const novedades = [
   {
+    fecha: '2026-11-25',
+    titulo: 'América Latina financia su respuesta al VIH, pero no le alcanza para frenar las nuevas infecciones',
+    resumen: 'La región paga el 96% de su respuesta al VIH y aun así las nuevas infecciones crecen. El informe 2026 de ONUSIDA señala dónde mirar: prevención y vinculación.',
+    enlace: '/novedades/informe-onusida-2026',
+    destacado: 'La región paga el 96% de su respuesta al VIH y aun así las nuevas infecciones crecen. El informe 2026 de ONUSIDA señala dónde mirar.',
+  },
+  {
     fecha: '2026-11-20',
     titulo: 'Prevención combinada del VIH: de la evidencia al acceso',
     resumen: 'La PrEP, la PEP e I=I cambiaron la prevención del VIH. La pregunta para los programas ya no es qué ofrecer, sino cómo garantizar el acceso a las personas que lo necesitan.',
