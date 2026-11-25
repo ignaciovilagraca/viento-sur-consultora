@@ -34,6 +34,26 @@
       "source": "/pc-correo",
       "destination": "/novedades/prevencion-combinada?utm_source=correo&utm_medium=email&utm_campaign=prevencion-combinada",
       "permanent": false
+    },
+    {
+      "source": "/onu-linkedin",
+      "destination": "/novedades/informe-onusida-2026?utm_source=linkedin&utm_medium=social&utm_campaign=informe-onusida-2026",
+      "permanent": false
+    },
+    {
+      "source": "/onu-facebook",
+      "destination": "/novedades/informe-onusida-2026?utm_source=facebook&utm_medium=social&utm_campaign=informe-onusida-2026",
+      "permanent": false
+    },
+    {
+      "source": "/onu-instagram",
+      "destination": "/novedades/informe-onusida-2026?utm_source=instagram&utm_medium=social&utm_campaign=informe-onusida-2026",
+      "permanent": false
+    },
+    {
+      "source": "/onu-correo",
+      "destination": "/novedades/informe-onusida-2026?utm_source=correo&utm_medium=email&utm_campaign=informe-onusida-2026",
+      "permanent": false
     }
   ]
 }

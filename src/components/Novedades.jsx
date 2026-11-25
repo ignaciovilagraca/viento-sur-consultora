@@ -4,6 +4,9 @@ import { useFadeUp } from '../hooks/useFadeUp';
 import { enviar } from '../lib/enviar';
 import { novedades } from '../data/novedades';
 
+// Miniatura de la nota: la indicada en imagen o, para las notas propias, la imagen de la página.
+const imagenDe = (n) => n.imagen || (n.enlace && n.enlace.startsWith('/novedades/') ? `${n.enlace}.png` : null);
+
 const FECHA = new Intl.DateTimeFormat('es-AR', { day: 'numeric', month: 'long', year: 'numeric' });
 
 function formatearFecha(iso) {
@@ -90,7 +93,13 @@ export default function Novedades() {
               <p className="novedades__vacio">Pronto vamos a publicar las primeras novedades.</p>
             ) : (
               novedades.map((n) => (
-                <article className="novedad" key={`${n.fecha}-${n.titulo}`}>
+                <article className={`novedad${imagenDe(n) ? ' novedad--con-imagen' : ''}`} key={`${n.fecha}-${n.titulo}`}>
+                  {imagenDe(n) && (
+                    <a className="novedad__imagen" href={n.enlace} tabIndex={-1} aria-hidden="true">
+                      <img src={imagenDe(n)} alt="" width="1200" height="630" loading="lazy" />
+                    </a>
+                  )}
+                  <div className="novedad__cuerpo">
                   <time className="novedad__fecha" dateTime={n.fecha}>
                     {formatearFecha(n.fecha)}
                   </time>
@@ -108,6 +117,7 @@ export default function Novedades() {
                     )}
                   </h3>
                   <p className="novedad__resumen">{n.resumen}</p>
+                  </div>
                 </article>
               ))
             )}
