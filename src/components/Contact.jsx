@@ -45,6 +45,7 @@ export default function Contact() {
       }
 
       track('Consulta enviada');
+      window.umami?.track('formulario');
       setStatus('sent');
       setForm(INITIAL_STATE);
       setTimeout(() => setStatus('idle'), 3000);
@@ -68,7 +69,7 @@ export default function Contact() {
               />
             </div>
             <div className="contact__channels">
-              <a href="mailto:info@vientosurconsultores.com" className="contact__channel">
+              <a href="mailto:info@vientosurconsultores.com" className="contact__channel" data-umami-event="contacto" data-umami-event-canal="mail">
                 <MailIcon />
                 <div>
                   <span className="contact__channel-label">Email</span>
@@ -77,6 +78,8 @@ export default function Contact() {
               </a>
               <a
                 href="https://wa.me/5491141646690"
+                data-umami-event="contacto"
+                data-umami-event-canal="whatsapp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__channel"
@@ -89,6 +92,8 @@ export default function Contact() {
               </a>
               <a
                 href="https://www.linkedin.com/company/vientosurconsultores"
+                data-umami-event="contacto"
+                data-umami-event-canal="linkedin"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__channel"
@@ -103,6 +108,8 @@ export default function Contact() {
             <div className="contact__secondary">
               <a
                 href="https://www.instagram.com/vientosurconsultores/"
+                data-umami-event="contacto"
+                data-umami-event-canal="instagram"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -111,13 +118,15 @@ export default function Contact() {
               </a>
               <a
                 href="https://www.facebook.com/vientosurconsultores"
+                data-umami-event="contacto"
+                data-umami-event-canal="facebook"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FacebookIcon />
                 <span>Viento Sur Consultores</span>
               </a>
-              <a href="tel:+17862390333">
+              <a href="tel:+17862390333" data-umami-event="contacto" data-umami-event-canal="telefono-eeuu">
                 <PhoneIcon />
                 <span>+1 786 2390333</span>
               </a>
