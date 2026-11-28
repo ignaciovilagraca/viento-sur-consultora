@@ -29,6 +29,7 @@ function Suscripcion() {
         return;
       }
       track('Suscripción al newsletter');
+      window.umami?.track('newsletter');
       setStatus('sent');
       setEmail('');
     },
